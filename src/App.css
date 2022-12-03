@@ -1,0 +1,52 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* ----Login----- */
+
+.loginContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: rgb(189, 186, 186);
+}
+
+.formWrapper {
+  background-color: rgb(139, 126, 139);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  border-radius: 10px;
+}
+
+form {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formInput {
+  padding: 5px;
+}
+
+.formInput::placeholder {
+  color: rgb(204, 202, 202);
+}
+
+.login {
+  color: #fff;
+}
+
+.link {
+  color: #fff;
+}
+
+.button {
+  padding: 5px;
+}
