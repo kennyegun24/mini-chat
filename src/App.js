@@ -9,12 +9,7 @@ import { BrowserRouter } from 'react-router-dom';
 function App() {
   const {currentUser} = useContext(AuthContext)
 
-  // const Protected = ({children}) => {
-  //   console.log(currentUser)
-  //   if(!currentUser) {
-  //     return <Navigate to='/login' />;
-  //   }
-  // }
+i
   return (
     <BrowserRouter>
       <Routes>
