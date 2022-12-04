@@ -21,13 +21,22 @@ import { getStorage } from "firebase/storage";
 //   appId: "1:529592359836:web:bfaf9d7af0775761270659"
 // };
 
+// const firebaseConfig = {
+//   apiKey: "AIzaSyBBRuEdMx26wccsv7mwXDiMkpomZN2R6JA",
+//   authDomain: "chat3-995a6.firebaseapp.com",
+//   projectId: "chat3-995a6",
+//   storageBucket: "chat3-995a6.appspot.com",
+//   messagingSenderId: "90890848812",
+//   appId: "1:90890848812:web:63798035e303936549df89"
+// };
+
 const firebaseConfig = {
-  apiKey: "AIzaSyBBRuEdMx26wccsv7mwXDiMkpomZN2R6JA",
-  authDomain: "chat3-995a6.firebaseapp.com",
-  projectId: "chat3-995a6",
-  storageBucket: "chat3-995a6.appspot.com",
-  messagingSenderId: "90890848812",
-  appId: "1:90890848812:web:63798035e303936549df89"
+  apiKey: "AIzaSyC0RXO1Xu2YzwqUTQvW4c5w_bEKC_D1qA8",
+  authDomain: "chat-eb001.firebaseapp.com",
+  projectId: "chat-eb001",
+  storageBucket: "chat-eb001.appspot.com",
+  messagingSenderId: "215500312650",
+  appId: "1:215500312650:web:a10d39ee21b4a1c0bc96b3"
 };
 
 // Initialize Firebase

@@ -1,13 +1,15 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth, db, storage } from '../firebase';
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { doc, setDoc } from "firebase/firestore";
-// import {  } from '../firebase';
+
 const Register = () => {
 
   const [err, setErr] = useState(false)
+  const navigation = useNavigate()
+
   const submitInput = async (e) => {
     e.preventDefault()
     const displayName = e.target[0].value;
@@ -17,7 +19,7 @@ const Register = () => {
 
     try {
       const response = await createUserWithEmailAndPassword(auth, email, password)
-      const storageRef = ref(storage, displayName);
+      const storageRef = ref(storage, response.user.uid);
       const uploadTask = uploadBytesResumable(storageRef, file);
 
       uploadTask.on(
@@ -36,15 +38,17 @@ const Register = () => {
               email,
               photoURL: downloadURL,
             });
+            // await setDoc(doc(db, "userchat", response.user.uid, {}))
+            navigation('/');
             });
           }
         );
+      console.log(uploadTask)
     } catch(err) {
       setErr(true)
     }
 
   }
-
 
   return ( 
     <div className='loginContainer'>
@@ -54,7 +58,12 @@ const Register = () => {
         <input className='formInput' type="name" placeholder='name'/>
         <input type="email" className='formInput' placeholder='enter your email'/>
         <input type="password" className='formInput' placeholder='enter your password...'/>
-        <input type="file" />
+        <input type="file" id="file" style={{display:"none"}} />
+        <label htmlFor="file">
+          <span>
+            put an image
+          </span>
+        </label>
         <button type="submit" className='button'>
           SIgn up
         </button>
