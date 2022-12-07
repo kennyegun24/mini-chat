@@ -160,7 +160,7 @@ body {
 }
 
 .userChat p {
-  font-size: 4rem;
+  font-size: 1rem;
   font-weight: 600;
 }
 .userChat span {
@@ -264,6 +264,7 @@ body {
     flex-direction: column;
     height: 100vh;
     width: 100%;
+    border-radius: 0;
   }
 
   .userMain {
@@ -332,7 +333,7 @@ body {
   }
 
   .messages {
-    height: 72vh;
+    height: 90%;
   }
 
   .rightside {
@@ -340,7 +341,7 @@ body {
   }
 
   .inputContainer {
-    height: 4%;
+    height: 6%;
   }
 
   .inputContainer input {
