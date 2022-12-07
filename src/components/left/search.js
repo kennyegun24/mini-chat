@@ -26,7 +26,8 @@ const Search = () => {
   }
 
   const handleKey = (e) => {
-    e.code === "Enter" && handleSearch();
+    e.preventDefault()
+    handleSearch();
   }
 
   const handleClick = async () => {
@@ -65,7 +66,9 @@ const Search = () => {
 
   return (
     <div className='searchDiv'>
-        <input type="search" value={useranme} onKeyDown={handleKey} onChange={(e) =>setUseranme(e.target.value)} className='search' placeholder='search for a user...'/>
+      <form onSubmit={handleKey}>
+        <input type="search" value={useranme} onChange={(e) =>setUseranme(e.target.value)} className='search' placeholder='search for a user...'/>
+      </form>
         {err && <span>No users....</span>}
         {user && <div className="userWrapper userWrapperSm" onClick={handleClick}>
             <img src={user.photoURL} alt="" />
