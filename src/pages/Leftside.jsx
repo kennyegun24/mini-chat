@@ -10,13 +10,6 @@ const Leftside = () => {
         <Search />
         <div className='leftUser'>
           <Users />
-          <Users />
-          <Users />
-          <Users />
-          <Users />
-          <Users />
-          <Users />
-          <Users />
         </div>
     </div>
   )
