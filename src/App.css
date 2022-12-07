@@ -28,7 +28,7 @@ body {
   border-radius: 10px;
 }
 
-form {
+.form {
   display: flex;
   gap: 10px;
   flex-direction: column;
@@ -66,7 +66,7 @@ form {
 }
 
 .chatWrapper {
-  width: 60%;
+  width: 80%;
   border: 1px solid black;
   display: flex;
   height: 70vh;
@@ -75,18 +75,22 @@ form {
 }
 
 .leftside {
+  height: 100%;
   flex: 1;
-  background-color: #9b9bf0;
+  background-color:  #284b28;
 }
 
 .rightside {
+  height: 100%;
   flex: 2;
   border-left: 1px solid black;
   background-color: white;
+  color: #fff;
+
 }
 
 .navContainer {
-  background-color: aqua;
+  background-color: #284b28;
 }
 
 .navWrapper {
@@ -120,14 +124,16 @@ form {
 .navWrapper p {
   font-size: 14px;
   font-weight: 600;
+  color: #fff;
 }
 
 .search {
-  background: #cbcbec;
+  background: #fff;
   padding: 5px;
   width: 100%;
   border: none;
   border-bottom: 1px solid black;
+  font-size: 18px;
 }
 
 .searchDiv {
@@ -154,7 +160,7 @@ form {
 }
 
 .userChat p {
-  font-size: 15px;
+  font-size: 4rem;
   font-weight: 600;
 }
 .userChat span {
@@ -184,28 +190,34 @@ form {
 
 .topnavContainer {
   padding: 10px;
-  background: #9b9bf0;
+  background: #284b28;
   height: 9%;
 }
 
 .inputContainer {
-  height: 9%;
+  height: 6vh;
+  display: flex;
+  width: 100%;
 }
 
 .inputContainer input {
-  width: 100%;
-  padding: 10px;
+  width:90%;
+}
+
+.inputContainer button {
+  width: 10%;
 }
 
 .userPhoto {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
 }
 
 .message {
   display: flex;
   gap: 10px;
+  height: 100%;
 }
 
 .messages {
@@ -235,8 +247,104 @@ form {
 }
 
 .messageContent {
+  font-size: 1rem;
   padding: 10px;
-  background: #c3c3e2;
+  background:  #284b28;
   height: fit-content;
   border-radius: 0px 10px 10px 10px;
+}
+
+.chatRight {
+  width: 100%;
+}
+
+@media (max-width: 765px) {
+  .chatWrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+  }
+
+  .userMain {
+    display: flex;
+    overflow: scroll;
+    gap: 5px;
+    height: 20vh;
+    height: fit-content;
+  }
+
+  .userMain::-webkit-scrollbar {
+    display: none;
+  }
+
+  .topnavContainer {
+    height: 5vh;
+  }
+
+  .userWrapper {
+    display: flex;
+    flex-direction: column;
+    background-color:  #fff;
+    border: 1px solid #111;
+    border-radius: 10px;
+  }
+
+  .userWrapperSm {
+    display: flex;
+    width: 100px;
+    height: 100px;
+  }
+
+  .userWrapper img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .userChatM p, .userChatM span {
+    display: none;
+  }
+
+  .leftside {
+    border-bottom: 1px solid black;
+    /* height: 20vh; */
+  }
+
+  .navContainer{
+    height:5vh;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .navWrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .chatss {
+    height: fit-content;
+  }
+
+  .chatRight {
+    height: 80vh;
+  }
+
+  .messages {
+    height: 72vh;
+  }
+
+  .rightside {
+    height: 100%;
+  }
+
+  .inputContainer {
+    height: 4%;
+  }
+
+  .inputContainer input {
+    padding: 10px;
+    font-size: 16px;
+  }
 }
