@@ -1,15 +1,17 @@
 import React, { useContext } from 'react'
-import img from '../../assets/screen-0.jpg'
+// THIS IS USED TO SIGN OUT
 import { signOut } from 'firebase/auth'
 import { auth } from '../../firebase'
 import { AuthContext } from '../../context/context'
 const Navbar = () => {
+
+  // THIS CURRENTUSER WAS CREATED IN CONTEXT.JS TO CHECK FIR A SUCCESSFUL SIGN IN
   const {currentUser} = useContext(AuthContext)
   
   return (
     <div className="navContainer">
         <div className="navWrapper">
-            <p>Ken Chat</p>
+            <p>Chat</p>
             <div className='navMinWrap'>
                 <img src={currentUser.photoURL} alt="" className='imgNav'/>
                 <p>{currentUser.displayName}</p>

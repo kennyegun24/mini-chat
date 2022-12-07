@@ -6,8 +6,13 @@ const Chat = () => {
   return (
     <div className='chatContainer'>
         <div className="chatWrapper">
-            <Leftside />
-            <Rightside />
+          <div className="chatss">
+          <Leftside />
+          </div>
+          <div className="chatRight">
+          <Rightside />
+
+          </div>
         </div>
     </div>
   )
